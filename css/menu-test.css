@@ -1,0 +1,124 @@
+  .wrapper-menu {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-gray-dark);
+  }
+  nav {
+    margin: 0;
+    padding: 0;
+    height: 2rem;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: none;
+      width: 100%;
+      z-index: 3;
+
+      &.open {
+        max-width: 95rem;
+        margin-top:7rem;
+        
+      }
+
+      &.opening {
+        display: flex;
+        height: 5rem;
+        
+        li {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 50px;
+          width: 100%;
+        }
+    }
+    }
+
+    li {
+      border-bottom: 1px solid #f6f4e2;
+      background-color: var(--color-gray-light);
+      opacity: .8;
+      
+      &:first-child{
+        border-top: 1px solid #f6f4e2;
+      }
+      &:last-child{
+        border-bottom: none;
+      }
+    
+    }
+    a {
+      color: black;
+      padding: 1.5em 4em 1.5em 3em;
+      text-decoration: none;
+      font-size: 10px;
+      font-weight: bold;
+      
+      &:hover{
+        background-color: lightslategray;
+      }
+      &:visited {
+        color: black;
+      }
+
+    }
+}
+
+  .menu-toggle {
+    position: absolute;
+    padding: 0.8em;
+    top: 4.1em;
+    right: .5em;
+    cursor: pointer;
+  }
+  
+  .hamburger,
+  .hamburger::before,
+  .hamburger::after {
+    content: '';
+    display: block;
+    background: #EBEBD3;
+    height: 3px;
+    width: 2em;
+    border-radius: 3px;
+    -webkit-transition: all ease-in-out 350ms;
+    transition: all ease-in-out 350ms;
+  }
+  
+  .hamburger::before {
+    -webkit-transform: translateY(-7px);
+            transform: translateY(-7px);
+  }
+  
+  .hamburger::after {
+    -webkit-transform: translateY(4px);
+            transform: translateY(4px);
+  }
+  
+  .open .hamburger {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  
+  .open .hamburger::before {
+    display: none;
+  }
+  
+  .open .hamburger::after {
+    -webkit-transform: translateY(-1px) rotate(-90deg);
+            transform: translateY(-1px) rotate(-90deg);
+  }
+  
+  .site-nav--open {
+    -webkit-clip-path: circle(150% at top right);
+            clip-path: circle(150% at top right);
+  }

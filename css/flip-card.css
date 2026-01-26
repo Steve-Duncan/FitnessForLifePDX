@@ -1,0 +1,45 @@
+.flip-card-wrapper {
+    /* Set a width/height for the card container */
+    /* width: 300px;
+    height: 200px; */
+    /* Add perspective to enable 3D effects */
+    perspective: 1000px; 
+}
+
+.flip-card-wrapper .flip-card {
+    /* Use CSS Grid to stack children */
+    display: grid; 
+    /* Smooth the animation */
+    transition-duration: 0.6s; 
+    transition-timing-function: ease-in-out;
+    /* Maintain 3D space */
+    transform-style: preserve-3d; 
+    height: 100%; /* Ensure inner container takes full height */
+}
+
+.flip-card-wrapper .flip-card .flip-card-front, .flip-card-back {
+    padding: 1rem;
+    /* Place all children in the same grid cell */
+    grid-row: 1/2; 
+    grid-column: 1/2; 
+    /* Hide the back face when rotated away from the viewer */
+    backface-visibility: hidden; 
+}
+
+/*.flip-card-wrapper .flip-card .flip-card-front {
+    /~ Start with the front facing forward ~/
+    transform: rotateX(0deg);
+    background: #f0a3ff; /~ Example background ~/
+}
+*/
+/*.flip-card-wrapper .flip-card .flip-card-back {
+    /~ Start with the back rotated away ~/
+    transform: rotateX(-180deg);
+    background: #a3faff; /~ Example background ~/
+}
+*/
+/*/~ Flip the card on hover ~/
+.flip-card-wrapper:hover .flip-card {
+    transform: rotateX(-180deg);
+}
+*/

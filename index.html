@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles-menu.css">
+    <link rel="stylesheet" href="css/slide.css">
+    <!-- <link rel="stylesheet" href="css/flip-card.css"> -->
+    <link rel="stylesheet" href="css/flipcard-slider.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js" defer></script>
+
+    <script src="./js/menu.js" defer></script>
+    <script src="./js/slide.js" defer></script>
+    <script src="./js/card.js" defer></script>
+    <!-- <script src="./js/fitness.js" defer></script> -->
+    <!-- <script src="./js/flip-card.js" defer></script> -->
+    <script src="./js/flipcard-slider.js" defer></script>
+
+</head>
+<body>
+  <div class="container">
+
+    <header class="header">
+    
+    <div class="logo">
+        <a href="/"><img class="logo-img"/></a>
+      </div>
+
+    <div class="wrapper-menu">
+        <nav class="site-nav">
+          
+          <div class="menu-toggle">
+            <div class="hamburger"></div>
+          </div>
+
+          <ul class="open desktop">
+            <li><a href="/">Home</a></li>
+            <!-- <li><a href="#class-schedule">Fitness Classes</a></li> -->
+            <li><a href="#flip-card-slider">Fitness Classes</a></li>
+            <li><a href="#hello-page">About</a></li>
+            <li><a href="#real-people">Testimonials</a></li>
+            <li><a href="#contact-info">Contact Me</a></li>
+
+          </ul>
+
+        </nav>
+    </div>
+  </header>
+
+    <div class="main">
+      <section class="page" id="intro">
+        <!-- <div class="div-1"> -->
+          <span class="page-title">Welcome to Fitness for Life Studio!</span>
+        <!-- </div> -->
+        <!-- Slideshow container -->
+        <div class="div-2 slideshow-container">
+
+          <!-- Full-width images with number and caption text -->
+          <div class="mySlides slide-1 fade">
+            <!-- <div class="numbertext">1 / 3</div> -->
+            <img src="images/hero-images/photo-2.jpg" style="width:100%">
+            <div class="text"><p>Don’t wait—start your journey to better health and longevity with our Fitness for Life Exercise Class today!</p></div>
+          </div>
+
+          <div class="mySlides slide-2 fade">
+            <!-- <div class="numbertext">2 / 3</div> -->
+            <img src="images/hero-images/champs.jpg" style="width:100%">
+            <div class="text"><p>Transform Your Body, Transform Your Life!</p></div>
+          </div>
+
+          <div class="mySlides slide-3 fade">
+            <!-- <div class="numbertext">3 / 3</div> -->
+            <img src="images/hero-images/large-group.jpg" style="width:100%">
+            <div class="text">
+              <p>Boost your health and happiness with fun and practical fitness programs!</p>
+            </div>
+          </div>
+
+          <div class="mySlides slide-4 fade">
+            <img src="images/hero-images/lat-pulldown-mobile.jpg" style="width:100%">
+            <div class="text"><p>Build muscle and increase power with our strength training.</p></div>
+          </div>
+        </div>
+        <div class="div-3 btnParentDiv">
+          <!-- Button parent div -->
+          <div class="joinButton"><a href="#contact-info">Join us now!</a></div>
+        </div>
+      </section>
+
+<section class="flip-card-slider" id="flip-card-slider">
+    <h2>Our Programs</h2>
+    <div class="slider-container">
+        <div class="card-track">
+            <!-- Card 1 -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h3>Fitness for Life</h3>
+                        <p>Engaging classes focused on building strength and muscle tone through safe and effective resistance techniques, tailored to improve daily activities, enhancing stability, flexibility, and movement, helping you stay active and independent.</p>
+                        <button class="flip-btn">Learn More</button>
+                    </div>
+                    <div class="flip-card-back">
+                      <h3>Fitness for Life</h3>
+                      <p><b>Trinity United Methodist Church</b>
+                          3915 SE Steele St, Portland, OR 97202
+                              Tuesdays & Thursdays | 9:00 AM & 10:00 AM
+                            
+                        <b>Oak Grove United Methodist Church</b>
+                          14700 SE Rupert Dr, Oak Grove, Portland, OR 97267
+                              Mondays & Wednesdays | 9:00 AM
+                              
+                        <b>Oregon City Christian Church (Community Center)</b>
+                          1179 South End Rd, Oregon City, OR 97045
+                              Thursdays | 12:00 PM
+
+                        Cost: $10 per class<br>or $65 monthly (2 classes per week)
+                      </p>
+                        <button class="flip-btn-back">Back</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h3>Circuit Training for Everybody</h3>
+                <!-- <p><b>Circuit Training for Everybody</b><br> -->
+                        <p>
+                          Enjoy energizing sessions that mix moderate cardio with strength, balance, and agility exercises, designed to increase energy levels, build stamina, and enhance overall fitness. Perfect for achieving comprehensive physical conditioning and maximizing workout effectiveness.
+                        </p>
+                        <button class="flip-btn">Learn More</button>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Circuit Training</h3>
+                <p><b>Trinity United Methodist Church</b>
+                    3915 SE Steele St, Portland, OR 97202
+                        Saturdays | 8:00 AM, 9:00 AM & 10:15 AM
+          
+                  Cost: $10 per class<br>or $65 monthly (2 classes per week)
+                </p>
+                        <button class="flip-btn-back">Back</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h3>Personal Training</h3>
+                        <p>Customized Programs: Personalized training sessions tailored to individual goals, available online and in person. Having a personal trainer provides personalized guidance, accountability, and expertise to help you achieve your fitness goals effectively.
+                         Who It’s For: Adults and active older adults, women in perimenopause/postmenopause, anyone wanting to improve strength, balance, bone health, and longevity
+</p>
+                        <button class="flip-btn">Learn More</button>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Personal Training</h3>
+                        <p><b>Personal Training Studio – Milwaukie, OR</b>
+                          6435 SE Ketchum St, Milwaukie, OR
+                        <b>Session Options:</b>
+                          One-on-One Personal Training
+                          Partner Training (2 people)
+                          Small Group Training (3 people)
+                        <b>Getting Started:</b>
+                          Complimentary 30-minute trial session
+                          Phone consultation to review goals and habits
+                          First session includes assessments
+                            and personalized exercises
+                        <b>Pricing (55-minute sessions):</b>
+                          One-on-One: $90/session | $80/session (10-pack)
+                          Partner: $55/person | $50/person (10-pack)
+                          Small Group: $40/person | $35/person (10-pack)
+                          💡 Bring-a-Friend Bonus applies for package pricing
+                        </p>
+                        <button class="flip-btn-back">Back</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h3>Online Coaching</h3>
+                        <p>Who It’s For:
+                            Clients wanting strength, mobility, and endurance at home
+                            Busy clients or travelers
+                            Adults and older adults seeking safe, science-based programs</p>
+                        <button class="flip-btn">Learn More</button>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Wellness Coaching</h3>
+                        <p><b>Train anywhere!</b>
+                          Flexible, personalized programs delivered through the Coach app.
+                          <br>
+                          What’s Included:
+                            Workouts with video instructions
+                            Progress tracking and program adjustments
+                            Messaging support for guidance
+                        </p>
+                        <button class="flip-btn-back">Back</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Arrows -->
+        <div class="slider-arrows">
+            <i class='fa fa-chevron-left' id="slider-left-arrow"></i>
+            <i class='fa fa-chevron-right' id="slider-right-arrow"></i>
+        </div>
+    </div>
+</section>
+
+<!-- test /////////////////////////////////////////////////////////// -->
+      <section class="page" id="hello-page">
+        <!-- <p class="title">Hello, I'm Thais Denmark!</p> -->
+        <span class="page-title">Hello, I'm Thais Denmark!</span>
+
+        
+        <div>
+          <img src="images/smiling-pretty-1.png" alt="">
+        
+         <p>My mission is to increase longevity, promote healthy lifestyles, and improve quality of life through dynamic, personalized health and fitness programs. I am dedicated to providing unwavering support, encouragement, and education to all of my clients. I firmly believe that exercise is a powerful tool for achieving better health, greater strength and a longer life.</p>
+
+         </div>
+      </section>
+
+
+      <section class="page" id="real-people">
+        <span class="page-title">Real People. Real Results.</span>
+        <img src="images/hero-images/champs.jpg" style="width:100%">
+
+        <p>Here at Fitness for Life Studio, we are committed to helping each individual achieve their health and wellness goals. Our students are living proof that, with dedication and adequate guidance, it is possible to transform lives.<br><b>See what some of our members have to say about their fitness journeys with us:</b>
+        </p>
+        <div class="card-wrapper">
+
+          <div class="card people">
+            <p>When I retired at age 71 and finally got a chance to incorporate daily exercise into my life, I was fortunate to discover classes being offered at my local community center by Dr. Thais Denmark. I have been doing two classes a week with Thais for more than 2½ years. I also take other classes like Zumba and yoga, but I consider Thais’ classes to be the backbone of my exercise regimen, as she includes strength, core, flexibility, mobility and balance.
+            </p>
+            <p><span><img src="images/fitness_icon_v2.png" alt=""></span><span>Deb Whitcomb, Portland, OR</span></p>
+          </div>
+
+          <div class="card people">
+            <p>When I started training with Thais, about two years ago, I couldn’t walk around my block. I didn’t know what a plank was, let alone do one-first time I tried I just lay sobbing on the floor. Now, thanks to Thais’ personal training and her Fitness for Life classes, I enjoy 6-8 mile hikes with friends at least once or twice a week. I’m able to run around with my grandkids, garden, travel, and a million other things I thought I’d never be able to do again. Thais showed me how to get healthier and it changed my life - I’m stronger, more flexible, and a whole lot happier!</p>
+            <p><span><img src="images/fitness_icon_v2.png" alt=""></span><span>Maryanne Katz, 73</span></p>
+          </div>
+          
+          <div class="card people">
+            <p>I started going to Thais’ classes during COVID in the park. Before that, I hadn’t stayed with an exercise routine longer than a month. Thais cares about each person, giving encouragement and challenges for every level of fitness. She varies the routines and equipment, so it isn’t the same old thing every time. As a doctor, she knows the science behind the movements and is always ready to help a person achieve their goal. Her warmth and sense of humor helps the hour go by.</p>
+            <p><span><img src="images/fitness_icon_v2.png" alt=""></span><span>Donna Kauttman</span><p>
+
+          </div>
+
+          <div class="card people">
+            <p>I knew from the first class I took from Thais that she was someone special. Working out with her is much more than an exercise class. We learn heathy way to take care of our bodies. Her enthusiasm is infectious. Class doesn’t seem like work it’s fun.</p>
+            <p><span><img src="images/fitness_icon_v2.png" alt=""></span><span>Clare Lehnis</span><p>
+          </div>
+
+          <div class="card people">
+            <p>Dear reader, if you're thinking about joining one of Thais Denmark's excellent Fitness for Life classes, I say, "Go for it!" Here's why!:<br>
+              Excellent and excellent for you: A+<br>
+              Experienced, Compassionate, Inspirational, Lovable ! Business Trainer and Operator: A+
+            </p>
+            <p><span><img src="images/fitness_icon_v2.png" alt=""></span><span>Mark McLeod, Portland, OR</span></p>
+          </div>
+
+
+          <div class="card people">
+            <p>I did my personal training with Thais over a year. She’s passionate and caring, knows her stuff. She was able to meet me where I was physically, mentally, and emotionally and easily adjusted my workouts when needed. I was very grateful to be able to have her as a trainer. She’s one of the best.</p>
+            <p><span><img src="images/fitness_icon_v2.png" alt=""></span><span>Clare Lehnis</span></p>
+          </div>
+
+          <div class="card people">
+            <p>Thais is my favorite trainer. Her high energy keeps me motivated, her thoughtful encouragement keeps me coming back and her excellent workouts feel tailored to me. She is highly educated, and that fact puts her above the rest. I’m stronger, happier, and overall healthier because of her classes.</p>
+            <p><span><img src="images/fitness_icon_v2.png" alt=""></span><span>Stephy F, age 61</span></p>
+          </div>
+        
+          <!--  navigation buttons -->
+          <span class="arrow" id="arrow">
+            <i class='fa fa-chevron-left' id="left-arrow"></i>
+            <i class='fa fa-chevron-right right-arrow' id="right-arrow"></i>
+          </span>
+        </div>
+      </section>
+
+        <section class="page" id="start">
+          <span class="page-title">Ready to start your fitness journey?</span>
+          <p>Don’t wait—start your journey to better health and longevity with our Fitness for Life Exercise Class today!</p>
+          <img src="/images/gorgeous-young-v2-1.png" alt=""></img>
+          <p>Come join us!</p>
+
+        </section>
+    </div>
+
+    <footer id="contact-info">
+      <a href="/"><img class="logo-img"/></a>
+      <b>Contact Information:</b>
+      
+      <a href="tel:+15037355716" target="_blank"><span>
+        <svg aria-hidden="true" class="e-font-icon-svg e-fas-phone-square-alt" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h352a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48zm-16.39 307.37l-15 65A15 15 0 0 1 354 416C194 416 64 286.29 64 126a15.7 15.7 0 0 1 11.63-14.61l65-15A18.23 18.23 0 0 1 144 96a16.27 16.27 0 0 1 13.79 9.09l30 70A17.9 17.9 0 0 1 189 181a17 17 0 0 1-5.5 11.61l-37.89 31a231.91 231.91 0 0 0 110.78 110.78l31-37.89A17 17 0 0 1 299 291a17.85 17.85 0 0 1 5.91 1.21l70 30A16.25 16.25 0 0 1 384 336a17.41 17.41 0 0 1-.39 3.37z"></path></svg>503-735-5716<br>
+      </span></a>
+
+      <a href="mailto:thais@fitnessforlifepdx.com" target="_blank"><span><svg aria-hidden="true" class="e-font-icon-svg e-fas-envelope" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path></svg>thais@fitnessforlifepdx.com</span></a>
+
+      <b>Social Media</b>
+      <!-- Facebook -->
+      <a href="https://www.facebook.com/profile.php?id=61561087778543" target="_blank"><span><svg aria-hidden="true" class="e-font-icon-svg e-fab-facebook-square" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"></path></svg>Fitness for Life PDX<br></span></a>
+
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/fitnessforlifepdx/" target="_blank"><span><svg aria-hidden="true" class="e-font-icon-svg e-fab-instagram" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>@fitnessforlifepdx</span></a>
+
+      <hr>
+      <p>
+        © 2024 Fitness for Life. All rights reserved
+      </p>
+    </footer>
+  </div>
+
+
+
+
+
+    
+</body>
+</html>

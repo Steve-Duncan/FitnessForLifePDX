@@ -1,0 +1,279 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+ 
+    
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #fff;
+}
+
+.container {
+    /* background-color: lightblue; */
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+}
+.header {
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center; */
+    height: 10vh;
+    padding: 1rem;
+    background: linear-gradient(to left, rgb(254, 155, 2), white ),
+                linear-gradient(to left, rgb(254, 155, 2), white );
+    
+    /* #e2ffd3 */
+    /* background-color: lightcoral; rgb(235, 254, 224)*/
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.page {
+    /* height: 85vh; */
+    /* background-color: lightgreen; */
+    /* width: 100%; */
+    padding-top: 3rem;
+    gap: 0;
+    row-gap: 0;
+}
+.page:not(#intro) {
+    /* background-color: lightgreen; */
+    background: radial-gradient(160% 80% at right center, #e2ffd3 30%, white );
+}
+
+/* styles for intro section */
+#intro {
+    min-height: 90vh;
+/* background: radial-gradient(ellipse at right, #e2ffd3, transparent); */
+background: radial-gradient(160% 80% at right center, #e2ffd3 30%, white );
+/* z-index: 100;     */
+padding-top: 0;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* justify-content: stretch; */
+    /* justify-content: space-around; */
+    /* gap: 2rem; */
+
+    
+
+    .joinButton {
+        align-self: center;
+        justify-self:center;
+
+        margin: 4rem auto;
+        font-size: 2.5rem;
+        border: 1px solid black;
+        padding: 0 1rem;
+        border-radius: 1.5rem;
+        box-shadow: 0 0 20px 5px rgba(0, 100, 255, 0.7);
+    }
+        
+}
+
+.div-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* background-color: red; */
+    min-height: 10%;
+    
+    flex:1;
+    font-size: 3.5rem;
+}
+.div-1, .div-2, .div-3 {
+    /* border: 2px solid black; */
+     margin: 0;
+     /* flex: 1; */
+}
+
+.btnParentDiv {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    /* border: 2px solid black; */
+    /* margin-bottom: 2rem; */
+
+}
+    
+.pageTitle {
+        font-size: 30px;
+        line-height: 40px;
+        padding-left: 3rem;
+    }
+
+.card {
+    /* width: 100%; */
+    align-items: center;
+    padding: 3rem;
+    margin: 3rem;
+    background-color: lightskyblue;
+    border-radius: 1.5rem;
+    box-shadow: 0 0 20px 5px rgba(0, 100, 255, 0.7);
+
+    p {
+    font-size: 16px;
+    line-height: 1.7;    
+    }
+}
+
+
+/* styles specific to fitness classes page */
+#fitnessClasses {
+    .card {
+        background-color: lightskyblue;
+
+        &::first-line {
+            font-size: 22px;
+            line-height: 32px;
+        }
+    }
+}
+
+/* styles specific to hello page */
+#helloPage {
+    /* height: 85vh; */
+    min-height: 90vh;
+    background-color: lightsalmon;
+
+    .title  {
+        font-size: 4rem;
+        text-align: center;
+     }
+   
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            max-width: 70%;
+        }
+    }
+    p:last-child {
+        font-size: 18px;
+        line-height: 1.7;
+        color: #4c4c4c;
+        margin: 0;
+        padding: 3rem;
+        font-weight: 400;
+    }
+    
+}
+
+/* styles specific to testimonials page */
+#realPeople {
+    .card {
+        
+        padding-bottom: 2rem;
+        p {
+            display: flex;
+        }
+    }
+    .card.people {
+        position: relative;
+        display: none;
+
+    }
+    .card.people.active {
+        display: flex;
+        flex-direction: column;
+    }
+    .arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: space-between;
+        align-self: center;
+        /* margin-left: -3rem; */
+        width: 100%;
+        /* margin-right: -2rem; */
+        font-size: 32px;
+        color: lightgray;
+    }
+    >p {
+        font-size: 1.8rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+    p:last-child {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 2rem;
+    }
+}
+
+/* testing */
+.card-wrapper {
+    position: relative;
+    min-height: 300px; /* Adjust based on your content */
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 2rem;
+    pointer-events: none; /* Allows clicking through the container */
+}
+
+.arrow i {
+    pointer-events: auto; /* Re-enables clicking on the arrows themselves */
+    cursor: pointer;
+    font-size: 2rem;
+    /* color: #333;
+    background: rgba(255, 255, 255, 0.8); */
+    padding: 1rem;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.arrow i:hover {
+    /* background: rgba(255, 107, 53, 0.9);
+    color: #fff; */
+    transform: scale(1.1);
+}
+
+#left-arrow {
+    /* margin-left: auto; */
+}
+
+#right-arrow {
+    margin-left: auto;
+}
+
+/* Ensure cards are positioned for proper overlay */
+.card.people {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    /* width: 100%; */
+}
+
+.card.people.active {
+    position: relative;
+    opacity: 1;
+}
