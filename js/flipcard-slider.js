@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(() => {
             updateCardVisibility();
-            adjustSectionHeight();
+            // adjustSectionHeight();
         }, 250);
     });
 
