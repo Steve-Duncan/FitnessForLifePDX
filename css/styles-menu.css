@@ -32,7 +32,7 @@
     font-weight: 400;
   }
   .logo-img {
-      content: url("/images/logo-wide.png");
+      content: url("./images/logo-wide.png");
 
       width: 60%;
         object-fit: contain;
