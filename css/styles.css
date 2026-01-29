@@ -469,24 +469,30 @@ button {
 } */
 footer {
     height: 100%;
+
     display: flex;
     flex-direction: column;
 
     background-color: black;
     color: white;
     /* white-space: pre-line; */
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     padding: 1rem 1.5rem 1rem 2rem;
 
+    img {
+        width: 50%;
+    }
     span {
         display: flex;
         align-items: center;
+        line-height: 1.6;
+        font-size: 1.6rem;
     }
     svg {
     fill: white;
 
     height: 3rem;
-    width: auto;
+    max-width: 50%;
     margin: 0 1rem;
     }
     p {
@@ -671,18 +677,28 @@ html {
   color: white;
   transform: scale(1.1);
 }
+footer {
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .logo {
+        max-width: 33%;
+        height: 15rem;
+        align-items: center;
+        margin-left: 3rem;
+
+        img {
+            width: 40%; 
+        }
+
+    }
+    .contact, .social {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-grow: 2;
+    }   
 }
-/* Mobile View - 1 Card */
-/*@media (max-width: 768px) {
-  .card-wrapper {
-    grid-template-columns: 1fr;
-    padding: 2rem 3rem;
-    gap: 0;
-  }
-  
-  .arrow i {
-    font-size: 1.5rem;
-    padding: 0.8rem;
-  }
 }
-*/
+

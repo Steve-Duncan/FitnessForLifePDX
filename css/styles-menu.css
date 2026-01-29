@@ -1,18 +1,5 @@
-.wrapper-menu {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-  nav {
-    margin: 0 auto;
-    display: flex;
-    /* align-items: center;
-    justify-content: flex-end; */
-    align-self: center;
-    /* background-color: red; */
-    
-  }
-  .logo {
+.header .logo {
+    /* .logo { */
     /* max-width: 75%; */
     width: 100%;
     color: #fff;
@@ -35,6 +22,22 @@
       width: 60%;
       object-fit: contain;
      }
+
+/* } */
+.wrapper-menu {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  nav {
+    margin: 0 auto;
+    display: flex;
+    /* align-items: center;
+    justify-content: flex-end; */
+    align-self: center;
+    /* background-color: red; */
+    
+  }
   .menu-toggle {
     position: absolute;
     padding: 0.8em;
@@ -204,8 +207,8 @@
       nav a:focus {
         background-color: rgba(255,255,255,.10);
       }
-  
-    .logo {
+    /* this .logo is for the menu logo; footer .logo is in styles.css  */
+    .header .logo {
         margin: 0;
         justify-content: center;
         background-color: var(--color-dark-light);
@@ -214,175 +217,8 @@
     .site-nav--icon {
       display: none;
     }
+
   }
   
 
 
-/* .wrapper-menu {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-  .site-nav {
-    margin: 0;
-    padding: 0;
-    height: 2rem;
-    width: 100%;
-    justify-content: center;
-    display: flex;
-    display: none;
-    align-items: center;
-
-    & ul {
-      display: flex;
-      
-      flex-direction: column;
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-      width: 100%;
-      z-index: 3;
-
-      &.open {
-        max-width: 85rem;
-        margin-top:7rem;
-        
-      }
-
-      &.opening {
-        display: flex;
-        height: 5rem;
-        
-        li {
-          display: flex;
-          
-          align-items: center;
-          justify-content: center;
-          height: 50px;
-          width: 100%;
-        }
-    }
-    }
-
-    li {
-      border-bottom: 1px solid #f6f4e2;
-      background-color: var(--color-gray-light);
-      opacity: .8;
-      
-      &:first-child{
-        border-top: 1px solid #f6f4e2;
-      }
-      &:last-child{
-        border-bottom: none;
-      }
-    
-    }
-    a {
-      color: white;
-      padding: 1.5em 4em 1.5em 3em;
-      text-decoration: none;
-      font-size: 10px;
-      font-weight: bold;
-      
-      &:hover{
-        background-color: lightslategray;
-      }
-      &:visited {
-        color: white;
-      }
-
-    }
-}
-
-
-li {
-    visibility: none;
-}
-  .menu-toggle {
-    position: absolute;
-    padding: 0.8em;
-    top: 4.1em;
-    right: .5em;
-    cursor: pointer;
-  }
-  
-  .hamburger,
-  .hamburger::before,
-  .hamburger::after {
-    content: '';
-    display: block;
-    background: #EBEBD3;
-    height: 3px;
-    width: 2em;
-    border-radius: 3px;
-    -webkit-transition: all ease-in-out 350ms;
-    transition: all ease-in-out 350ms;
-  }
-  
-  .hamburger::before {
-    -webkit-transform: translateY(-7px);
-            transform: translateY(-7px);
-  }
-  
-  .hamburger::after {
-    -webkit-transform: translateY(4px);
-            transform: translateY(4px);
-  }
-  
-  .open .hamburger {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-  }
-  
-  .open .hamburger::before {
-    display: none;
-  }
-  
-  .open .hamburger::after {
-    -webkit-transform: translateY(-1px) rotate(-90deg);
-            transform: translateY(-1px) rotate(-90deg);
-  }
-  
-  .site-nav--open {
-    -webkit-clip-path: circle(150% at top right);
-            clip-path: circle(150% at top right);
-  }
-
-
-  @media (min-width: 738px) {
-    a:visited {
-      color: white;
-    }
-  
-    .menu-toggle {
-      display: none;
-    }
-  
-    .wrapper-menu {
-      background-color: var(--color-gray-light);
-      padding-bottom: 0;
-    }
-  
-    nav ul {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-end;
-  
-      &.open>li {
-        background-color: var(--color-gray-light);
-      }
-    }
-    nav li {
-       flex: 1 1 auto;
-       border: none;
-       &:first-child {
-        border: none;
-       }
-    }
-  
-    .logo {
-      margin: 0;
-      justify-content: center;
-      background-color: var(--color-dark-light);
-    }
-  } */

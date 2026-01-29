@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!e.target.classList.contains('flip-btn') && 
                 !e.target.classList.contains('flip-btn-back')) {
                 card.classList.toggle('flipped');
-                // adjustSectionHeight();
+                adjustSectionHeight();
             }
         });
 
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
             flipBtn.addEventListener('click', (e) => {
                 e.stopPropagation();
                 card.classList.add('flipped');
-                // adjustSectionHeight();
+                adjustSectionHeight();
             });
         }
 
@@ -49,26 +49,26 @@ document.addEventListener('DOMContentLoaded', () => {
             flipBtnBack.addEventListener('click', (e) => {
                 e.stopPropagation();
                 card.classList.remove('flipped');
-                // adjustSectionHeight();
+                adjustSectionHeight();
             });
         }
     });
 
     // Adjust section height based on flipped cards
-    // function adjustSectionHeight() {
-    //     const visibleCards = Array.from(cards).filter(card => 
-    //         !card.classList.contains('hidden-card')
-    //     );
-    //     const hasFlipped = visibleCards.some(card => 
-    //         card.classList.contains('flipped')
-    //     );
+    function adjustSectionHeight() {
+        const visibleCards = Array.from(cards).filter(card => 
+            !card.classList.contains('hidden-card')
+        );
+        const hasFlipped = visibleCards.some(card => 
+            card.classList.contains('flipped')
+        );
         
-    //     if (hasFlipped) {
-    //         sliderSection.style.paddingBottom = '8rem';
-    //     } else {
-    //         sliderSection.style.paddingBottom = '6rem';
-    //     }
-    // }
+        if (hasFlipped) {
+            sliderSection.style.paddingBottom = '8rem';
+        } else {
+            sliderSection.style.paddingBottom = '6rem';
+        }
+    }
 
     // Navigation arrows
     if (rightArrow) {
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 currentIndex = 0;
             }
             updateCardVisibility();
-            // adjustSectionHeight();
+            adjustSectionHeight();
         });
     }
 
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 currentIndex = Math.max(0, cards.length - cardsPerView);
             }
             updateCardVisibility();
-            // adjustSectionHeight();
+            adjustSectionHeight();
         });
     }
 
@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(() => {
             updateCardVisibility();
-            // adjustSectionHeight();
+            adjustSectionHeight();
         }, 250);
     });
 
