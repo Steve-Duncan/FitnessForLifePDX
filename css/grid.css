@@ -1,0 +1,42 @@
+.flip-card-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    /* Ensure container takes up space */
+    width: 300px;
+    height: 200px;
+}
+.flip-card-front, .flip-card-back {
+    position: unset;
+    grid-area: 1 / -1;
+    /* display: flex; */
+    /* justify-content: normal; */
+}
+.flip-card-front .flip-btn {
+    margin-top: 2rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.level-2-back {
+    /* display: unset; */
+    font-size: 1.4rem;
+
+    span {
+        display: flex;
+        justify-content: center;
+    }
+}
+#pers-trn {
+    margin-top: -1rem;
+}
+
+@media (min-width: 600px) {
+    .flip-card-inner {
+        width:100%;
+    }
+    #pers-trn {
+        margin-top: 2rem;
+    }

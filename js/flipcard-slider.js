@@ -25,6 +25,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const cardInner = card.querySelector('.flip-card-inner');
         const flipBtn = card.querySelector('.flip-btn');
         const flipBtnBack = card.querySelector('.flip-btn-back');
+        const flipBtnBack2 = card.querySelector('.flip-btn-back-2');
+        const flipBtnLocations = card.querySelector('.flip-btn-locations');
+        const level2Front = card.querySelector(".level-2-front");
+        const level2Back = card.querySelector(".level-2-back");
 
         // Click anywhere on the card to flip
         cardInner.addEventListener('click', (e) => {
@@ -41,14 +45,40 @@ document.addEventListener('DOMContentLoaded', () => {
             flipBtn.addEventListener('click', (e) => {
                 e.stopPropagation();
                 card.classList.add('flipped');
+                level2Back.classList.add('hidden');
+                level2Front.classList.remove('hidden');
+
                 adjustSectionHeight();
             });
         }
 
         if (flipBtnBack) {
             flipBtnBack.addEventListener('click', (e) => {
-                e.stopPropagation();
+                // e.stopPropagation();
                 card.classList.remove('flipped');
+                level2Back.classList.add('hidden');
+                // level2Front.classList.add('hidden');
+                adjustSectionHeight();
+            });
+        }
+        if (flipBtnBack2) {
+            flipBtnBack2.addEventListener('click', (e) => {
+                // e.stopPropagation();
+                card.classList.add('flipped');
+                level2Back.classList.add('hidden');
+                level2Front.classList.remove('hidden');
+                adjustSectionHeight();
+            });
+        }
+
+
+        if (flipBtnLocations) {
+            flipBtnLocations.addEventListener('click', (e) => {
+                e.stopPropagation();
+                level2Back.classList.remove('hidden');
+                level2Front.classList.add('hidden');
+                level2Front.classList.add('hidden');
+                // locations.classList.add('showMe');
                 adjustSectionHeight();
             });
         }
@@ -64,9 +94,9 @@ document.addEventListener('DOMContentLoaded', () => {
         );
         
         if (hasFlipped) {
-            sliderSection.style.paddingBottom = '8rem';
+            // sliderSection.style.paddingBottom = '10rem';
         } else {
-            sliderSection.style.paddingBottom = '6rem';
+            // sliderSection.style.paddingBottom = '8rem';
         }
     }
 

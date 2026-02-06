@@ -81,6 +81,11 @@
 .flip-card-front {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
+
+    img {
+        width: auto;
+        height: 75%;
+    }
 }
 
 .flip-card-front h3 {
@@ -108,14 +113,17 @@
 .flip-card-back p {
     /* font-size: 1.1rem; */
     line-height: 1.6;
-    font-size: 1.4rem;
+    /* font-size: 1.4rem; */
     /* margin-bottom: 2rem; */
     /* padding-top: 2rem; */
     white-space: pre-line;
 }
+.level-2-back {
+    min-height: max-content;
+}
 
 /* Flip Buttons */
-.flip-btn, .flip-btn-back {
+.flip-btn, .flip-btn-back, .flip-btn-back-2, .flip-btn-locations {
     padding: 0.8rem 2rem;
     background: rgba(255, 255, 255, 0.2);
     border: 2px solid white;
@@ -172,6 +180,10 @@
 }
 
 .flip-card.hidden-card {
+    display: none;
+}
+
+.hidden {
     display: none;
 }
 
