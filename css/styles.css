@@ -49,6 +49,7 @@ body {
     /* height: 100vh; */
     display: flex;
     flex-direction: column;
+    font-size: 1.6rem;
 }
 .header {
     /* display: flex;
@@ -182,12 +183,12 @@ padding-top: 0;
     box-shadow: 0 0 20px 5px rgba(0, 100, 255, 0.7);
     
 
-    p {
-    font-size: 16px;
+   /* p {
+    /~ font-size: 16px; ~/
     line-height: 1.7;
-    /* width: 100%; */
+    /~ width: 100%; ~/
 
-    }
+    }*/
 }
 
 
@@ -207,91 +208,161 @@ padding-top: 0;
     min-height: 90vh;
     /* background-color: lightsalmon; */
 
+    span {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+
     .title  {
         font-size: 4rem;
         text-align: center;
      }
    
     div {
-        display: flex;
+        /* display: flex; */
         flex-direction: column;
         align-items: center;
 
         img {
             max-width: 70%;
         }
+
+        
     }
-    p:last-child {
-        font-size: 18px;
+    
+
+    p, ul {
+        /* font-size: 18px; */
         line-height: 1.7;
         color: #4c4c4c;
         margin: 0;
-        padding: 3rem;
+        padding: 1rem 2rem;
         font-weight: 400;
     }
     
 }
 
-/* styles specific to testimonials page */
+#hello-page {
+    display: grid;
+    grid-row: auto;
+    grid-column: auto 1fr 1fr auto;
+}
+#hello-1 {
+    display: flex;
+    /* flex-direction: row; */
+    /* align-items: center; */
+}
+
+#hello-1, #hello-2 {
+    grid-area: 2 / -2;
+    opacity: 1;
+    transition: opacity .5s ease-in-out; 
+
+    
+  /* /~ Match this duration in the JS setTimeout ~/ */
+}
+
+
+#hello-1.hide, #hello-2.hide {
+    /* display: flex; */
+    transition: opacity .5s ease-in-out; 
+    opacity: 0;
+}
+
+#hello-1.hidden, #hello-2.hidden {
+    display: none;
+        
+}
+
+#hello-2>ul {
+    list-style-position: inside;
+    list-style-type: circle;
+}
+#hello-2 ul:nth-of-type(2) {
+    margin-left: 0;
+}
+.fade-element {
+  opacity: 0;
+  visibility: hidden; /* Ensures the element doesn't occupy space when hidden */
+  transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+  /* Add other styling for layout (e.g., position: absolute) if you want them to overlap during transition */
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+}
+
+.fade-element.show {
+  opacity: 1;
+  visibility: visible;
+}
+
 #real-people {
-    .card-wrapper {
-        position: relative;
-        min-height: 300px; /* Adjust based on your content */
-    }
-    .card {
-        position: relative;
-        display: none;
-        padding-bottom: 2rem;
-        p {
-            display: flex;
-        }
-    }
-    .card.active {
-        display: flex;
-        flex-direction: column;
-    }
-    .arrow {
-        position: absolute;
-        top: 20rem;
-        transform: translateY(-50%);
-        display: flex;
-        justify-content: space-between;
-        align-self: center;
-        width: 100%;
-        font-size: 32px;
-        color: rgba(0, 100, 255, 0.7);
-        padding: 0 2rem;
-
-        i {
-            cursor: pointer;
-            font-size: 2rem;
-            padding: 1rem;
-            border-radius: 50%;
-            transition: all 0.3s ease;
-        }
-        .arrow i:hover {
-            transform: scale(1.1);
-        }
-
-        #right-arrow {
-            margin-left: auto;
-            z-index:1000;
-        }
-
-    }
-    >p {
-        font-size: 1.8rem;
-        padding-left: 3rem;
-        padding-right: 3rem;
-        padding-top: 2rem;
-    }
-    p:last-child {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 2rem;
+    p:first-of-type {
+        margin-left: 2rem;
+        margin-right: 2rem;
     }
 }
+
+
+.card-wrapper {
+    position: relative;
+    min-height: 300px; /* Adjust based on your content */
+}
+.card {
+    position: relative;
+    display: none;
+    padding-bottom: 2rem;
+    /* p {
+        display: flex;
+    } */
+}
+.card.active {
+    display: flex;
+    flex-direction: column;
+}
+.arrow {
+    position: absolute;
+    top: 20rem;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    width: 100%;
+    font-size: 32px;
+    color: rgba(0, 100, 255, 0.7);
+    padding: 0 2rem;
+
+    i {
+        cursor: pointer;
+        font-size: 2rem;
+        padding: 1rem;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+    }
+    .arrow i:hover {
+        transform: scale(1.1);
+    }
+
+    #right-arrow {
+        margin-left: auto;
+        z-index:1000;
+    }
+
+}
+/* p {
+    font-size: 1.8rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 2rem;
+} */
+p:last-child {
+    /* display: flex; */
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+
 
 
 
@@ -536,9 +607,9 @@ footer {
     max-width: 80%;
     margin: 0 auto;
 }
-html {
+/* html {
     font-size: 50%;
-}
+} */
 .header {
     width: 100%;
     height: 100%;
@@ -557,12 +628,23 @@ html {
         flex-direction: row;
 
         img {
-            max-width: 50%;
+            max-width: 40%;
         }
 
     }
 }
+#hello-1 {
+    display: flex;
+}
 
+#hello-2 {
+    justify-content: space-between;
+
+    img {
+        flex-grow: .5;
+    }
+    
+}
 /* #fitness-classes { 
     .arrow {
         display: none;
@@ -597,6 +679,9 @@ html {
         display: grid;
         grid-template-columns: repeat(3, auto-fit);
     }
+}
+.flip-card-front {
+    min-height: min-content;
 }
 
 /*#real-people {
@@ -635,10 +720,10 @@ html {
 
 /* Individual Cards */
 .card.people {
-  background: #fff;
+  /* background: #fff; */
   border-radius: 12px;
-  padding: 2rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* padding: 2rem; */
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
   transition: all 0.3s ease;
   display: block;
 }
@@ -677,6 +762,8 @@ html {
   color: white;
   transform: scale(1.1);
 }
+
+
 footer {
     justify-content: space-between;
     flex-direction: row;
